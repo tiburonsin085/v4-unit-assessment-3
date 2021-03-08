@@ -10,21 +10,21 @@ class Shelf extends Component {
         }
     }
     
-    componentDidUpdate(){
-        const mappedTitles = this.props.shelfArr.map((e,i)=>e)
-
-        const uniqueforShelf = [...new Set(mappedTitles)] 
-
-        this.
-    }
+    
     
     render(){
 
+        const shelfArr = this.props.shelfArr.map((e)=> e)
+
+        const shelfFilter = [... new Set(shelfArr)]
+        
+        const shelfShow = shelfFilter.map(e => <p className='titlesInTheShelf'>{e}</p>)
         
         return(
-            <div>
+            <div className='shelf'>
                 <p>Shelf</p>
-                <p>{mappedTitles}</p>
+                <button onClick = {this.props.clearShelf}>Clean Shelf</button>
+                <p>{shelfShow}</p>
 
             </div>
         )

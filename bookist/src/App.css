@@ -70,4 +70,12 @@ img{
   justify-content: space-around;
 }
 
+.titlesInTheShelf{
+  font-size: 15px;
+}
+.shelf{
+  
+  width: 20vw ;
+  height: 100vh;
+}
 
